@@ -251,8 +251,8 @@ dialog.lb form button{font:inherit;min-height:44px;padding:.4rem 1rem;border-rad
   var INTERVAL=3000; // milliseconds per image
 
   var stage=document.getElementById('stage'),frame=document.getElementById('frame'),
-      imgs=[document.getElementById('img-a'),document.getElementById('img-b')],cap=document.getElementById('stage-cap'),
-      play=document.getElementById('c-play'),lb=document.getElementById('lightbox'),
+      imgs=[document.getElementById('img-a'),document.getElementById('img-b')],cap=document.getElementById('stage-cap')||document.createElement('span'),
+play=document.getElementById('c-play')||document.createElement('button'),lb=document.getElementById('lightbox'),
       lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');
   var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var items=[],idx=0,front=0,timer=null,on=!reduce;
